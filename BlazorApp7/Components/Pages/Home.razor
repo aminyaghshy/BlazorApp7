@@ -6,7 +6,7 @@
 <p>@hh</p>
 
 
-<select @onchange="@xx">
+<select @onchange="xx">
     <option value="aaa">aaa</option>
     <option value="bbb">bbb</option>
     <option value="cccc">ccc</option>
@@ -18,12 +18,16 @@
     public string hh { get; set; } = "Ameen";
 
 
-    public void xx(ChangeEventArgs e)
+    private void  xx(ChangeEventArgs e)
         {
         if(e.Value!=null)
             {
             hh = e.Value.ToString();
             StateHasChanged();
+            }
+        else
+            {
+            hh = "'xxxxxxxxxx";
             }
         }
 }
